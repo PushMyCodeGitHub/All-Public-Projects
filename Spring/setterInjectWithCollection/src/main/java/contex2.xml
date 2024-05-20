@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    
+     <bean id="obj"  class="com.demo7.setterInjectWithCollection2.Desiganation">
+       <property name="id" value="11"/>
+       <property name="designation" value="designer"></property>
+                        
+    
+    </bean>
+     <bean id="obj1"  class="com.demo7.setterInjectWithCollection2.Desiganation">
+       <property name="id" value="12"/>
+       <property name="designation" value="devolper"></property>
+                        
+    
+    </bean>
+    
+        <bean id="l1"  class="com.demo7.setterInjectWithCollection2.Location">
+       <property name="city" value="Pune"/>
+    
+                        
+    
+    </bean>
+        <bean id="l2"  class="com.demo7.setterInjectWithCollection2.Location">
+       <property name="city" value="nashik"/>
+    
+                        
+    
+    </bean>
+    
+    
+        	    <bean id="e1"  class="com.demo7.setterInjectWithCollection2.Employee">
+                        
+                            <property name="id">
+                             <value>111</value>
+                          </property>
+                          <property name="name">
+                             <value>meena</value>
+                          </property>
+                          <property name="d1">
+                          
+                                    <list>
+                                     <ref bean="obj" />
+                                      <ref bean="obj1"/>                                     
+                                    
+                                    
+                                    </list>
+                                    
+                                   
+                          
+                          </property>
+                          
+                   
+                          
+                          <property name="m1">
+                          
+                                    <map>
+                                         <entry key="one" value-ref="l1" />
+                                         <entry key="two" value-ref="l2" />
+                                    
+                                    </map>
+                          
+                          </property>
+                          
+                          
+                          
+                          
+                          
+                          
+                       
+             
+             
+             </bean>
+    
+             
+             
+             
+        	 
+    
+        	 	
+    
+        	
+        	
+        	
+        	
+    
+    
+    </beans>
