@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">  
+    
+    
+    
+    
+             <bean id="obj"  class="com.startMaven.InjectDependency.Employee">
+          
+             </bean>
+   
+   
+             <bean id="obj1"  class="com.startMaven.InjectDependency.Employee">
+               
+                <constructor-arg value="111" type="int"/>
+             
+             
+             
+             </bean>
+             
+             <bean id="obj2"  class="com.startMaven.InjectDependency.Employee">
+               
+                <constructor-arg value="meena" />
+             
+             
+             
+             </bean>
+        	
+        	
+        	    <bean id="obj3"  class="com.startMaven.InjectDependency.Employee">
+               
+                <constructor-arg value="2222" type="int" />
+                <constructor-arg value="reena" />
+             
+             
+             
+             </bean>
+        	 	
+        	 	 <bean id="obj4"  class="com.startMaven.InjectDependency.Employee">
+               
+                <constructor-arg value="100" type="int" />
+                <constructor-arg value="Teena" />
+           <!-- here we passed reference variable of  DOB class to the constructor of employee class-->
+               <constructor-arg>
+              
+                         <ref bean="d1"  />
+               </constructor-arg>  
+             
+             
+             </bean>
+        	 	
+        	    <bean id="d1"  class="com.startMaven.InjectDependency.DOB">
+               
+                <constructor-arg value="12" type="int" />
+                <constructor-arg value="june" />
+                <constructor-arg value="2023"/>
+             
+             
+             
+             </bean>
+        	
+        	 	
+        	   
+        	
+        	
+        	
+        	
+        	
+    
+    
+    </beans>
